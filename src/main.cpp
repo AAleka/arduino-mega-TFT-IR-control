@@ -26,6 +26,10 @@
 /* END */
 
 
+/*
+  Main code
+*/
+
 #include <Adafruit_GFX.h>
 #include <MCUFRIEND_kbv.h>
 #include <TouchScreen.h>
@@ -328,11 +332,6 @@ void drawScreen()
 {
   tft.fillScreen(BLACK);
 
-  // tft.setTextColor(WHITE);
-  // tft.setTextSize(TITLE_SIZE);
-  // tft.setCursor(TITLE_X, TITLE_Y);
-  // tft.print("AC Controller");
-
   updateSensors();
   drawACButton();
   drawFanButton();
@@ -493,7 +492,6 @@ void drawConfigMenu()
   tft.fillScreen(BLACK);
   tft.setTextSize(2);
 
-  // Draw config labels and values
   for (int i = 0; i < NUM_CONFIGS; i++)
   {
     int y = 10 + i * 30;
@@ -512,7 +510,6 @@ void drawConfigMenu()
     }
   }
 
-  // Move buttons up so they’re visible (e.g., around y = 190)
   int btnY = 190;
   tft.fillRect(30, btnY, 60, 40, BLUE);  // UP
   tft.setTextColor(WHITE);
@@ -530,10 +527,9 @@ void drawConfigMenu()
 
 void handleConfigTouch(int x, int y)
 {
-    int btnY = 190; // match drawConfigMenu
+    int btnY = 190;
     int btnH = 40;
 
-    // Check buttons
     if (y > btnY && y < btnY + btnH)
     {
         if (x > 30 && x < 90) // UP
@@ -552,10 +548,9 @@ void handleConfigTouch(int x, int y)
     }
     else
     {
-        // Tap to change selection
         for (int i = 0; i < NUM_CONFIGS; i++)
         {
-            int yTop = 10 + i * 30; // match drawConfigMenu
+            int yTop = 10 + i * 30;
             if (y > yTop && y < yTop + 25)
             {
                 selectedConfigIndex = i;
@@ -672,3 +667,5 @@ void turnFanOff()
 {
   Serial.println("Fan should turn off");
 }
+
+/* END */
