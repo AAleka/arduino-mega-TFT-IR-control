@@ -42,4 +42,4 @@ Parts used:
 
 ![schematics](media/ArduinoMegaIRControl_bb.png)
 
-[![Watch the demo](media/demo_thumbnail.png)](media/video.mp4)
+[![Watch the demo](media/demo_thumbnail.png)](media/example.mp4)
