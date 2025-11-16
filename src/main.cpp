@@ -61,9 +61,9 @@
 #define DHTPIN 22
 #define DHTTYPE DHT11
 
-#define RTC_IO   26
-#define RTC_SCLK 27
-#define RTC_CE   25
+#define RTC_SCLK 27  // CLK
+#define RTC_IO   26  // DAT
+#define RTC_CE   25  // RST
 
 #define IR_PIN 23
 
