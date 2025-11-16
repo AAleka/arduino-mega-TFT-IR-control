@@ -41,3 +41,6 @@ Parts used:
 - GND -> GND
 
 ![schematics](media/ArduinoMegaIRControl_bb.png)
+
+https://github.com/user-attachments/assets/38142c50-95cb-43bc-b13b-a63042a8db48
+
